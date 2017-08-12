@@ -66,7 +66,7 @@ public class MainActivity extends Activity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == 0 && resultCode == RESULT_OK) {
-            ((TextView) findViewById(R.id.tv_path))
+            ((TextView) findViewById(R.id.tv_format))
                     .setText(CheckImgFormat.get(this, data.getData()));
         }
     }

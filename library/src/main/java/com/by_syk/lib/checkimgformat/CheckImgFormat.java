@@ -39,27 +39,27 @@ public class CheckImgFormat {
     /**
      * JPG/JPEG 格式
      */
-    public static final String FORMAT_JPG = "image/jpeg";
+    public static final String FORMAT_JPG = ".jpg";
 
     /**
      * PNG 格式
      */
-    public static final String FORMAT_PNG = "image/png";
+    public static final String FORMAT_PNG = ".png";
 
     /**
      * GIF 格式
      */
-    public static final String FORMAT_GIF = "image/gif";
+    public static final String FORMAT_GIF = ".gif";
 
     /**
      * BMP 格式
      */
-    public static final String FORMAT_BMP = "image/bmp";
+    public static final String FORMAT_BMP = ".bmp";
 
     /**
      * 其他或未知格式
      */
-    public static final String FORMAT_UNDEFINED = "undefined";
+    public static final String FORMAT_UNDEFINED = "";
 
     @StringDef({FORMAT_JPG, FORMAT_PNG, FORMAT_GIF, FORMAT_BMP, FORMAT_UNDEFINED})
     public @interface Format {}
@@ -99,8 +99,8 @@ public class CheckImgFormat {
      * @param imgFile 图片文件（非图片文件可能得到错误结果）
      */
     @CheckImgFormat.Format
-    public static String get(@Nullable File imgFile) {
-        if (!checkFile(imgFile)) {
+    public static String get(@Nullable File imgFile, boolean checkSuffix) {
+        if (!checkFile(imgFile, checkSuffix)) {
             return FORMAT_UNDEFINED;
         }
 
@@ -110,6 +110,16 @@ public class CheckImgFormat {
             e.printStackTrace();
         }
         return FORMAT_UNDEFINED;
+    }
+
+    /**
+     * 查看 {@link #get(File, boolean)}
+     * <br />
+     * checkSuffix = true
+     */
+    @CheckImgFormat.Format
+    public static String get(@Nullable File imgFile) {
+        return get(imgFile, true);
     }
 
     /**
@@ -157,9 +167,12 @@ public class CheckImgFormat {
         return format.equals(get(context, imgUri));
     }
 
-    private static boolean checkFile(@Nullable File imgFile) {
+    private static boolean checkFile(@Nullable File imgFile, boolean checkSuffix) {
         if (imgFile == null || !imgFile.isFile()) {
             return false;
+        }
+        if (!checkSuffix) {
+            return true;
         }
 
         String fileName = imgFile.getName();

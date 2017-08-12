@@ -26,7 +26,7 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <TextView
-        android:id="@+id/tv_path"
+        android:id="@+id/tv_format"
         android:text="format:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
