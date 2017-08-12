@@ -7,12 +7,12 @@
 
 首先会检查文件后缀；然后判断魔术数字，即检查文件数据流的前几个字节。参考冯立彬的博客：[使用JAVA如何对图片进行格式检查以及安全检查处理](http://blog.csdn.net/fenglibing/article/details/7728275)
 
-注：这些检查手段非常基础，请勿用于安全要求场景，但可作为前期判断。
+> 注：这些检查手段非常基础，请勿用于安全要求场景，但可作为前期判断。
 
 
 ### 添加库到项目
 
-此项目托管到 [**JitPack.io**](https://jitpack.io/)。
+此项目已托管到 [**JitPack.io**](https://jitpack.io/)。
 
 **第一步** 在项目根`build.gradle`中添加:
 
@@ -44,7 +44,7 @@ String format = CheckImgFormat.get(imgInputStream);
 ```
 
 ```java
-boolean res = CheckImgFormat.is(CheckImgFormat.FORMAT_JPG, imgFile);
+boolean isPng = CheckImgFormat.is(CheckImgFormat.FORMAT_PNG, imgFile);
 ```
 
 
