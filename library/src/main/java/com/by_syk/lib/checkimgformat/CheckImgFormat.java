@@ -97,6 +97,7 @@ public class CheckImgFormat {
      * 从图片文件获取格式。注意返回 {@link #FORMAT_UNDEFINED}
      *
      * @param imgFile 图片文件（非图片文件可能得到错误结果）
+     * @param checkSuffix 首先检查文件名后缀
      */
     @CheckImgFormat.Format
     public static String get(@Nullable File imgFile, boolean checkSuffix) {

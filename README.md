@@ -3,6 +3,7 @@
 [![](https://jitpack.io/v/by-syk/CheckImgFormat.svg)](https://jitpack.io/#by-syk/CheckImgFormat)
 [![](https://img.shields.io/badge/Download%20aar-1.0.1-brightgreen.svg)](out/checkimgformat-1.0.1.aar)
 
+
 对图片文件进行常见格式检查：「**.jpg**」、「**.png**」、「**.gif**」、「**.bmp**」
 
 首先会检查文件后缀；然后判断魔术数字，即检查文件数据流的前几个字节。参考冯立彬的博客：[使用JAVA如何对图片进行格式检查以及安全检查处理](http://blog.csdn.net/fenglibing/article/details/7728275)
