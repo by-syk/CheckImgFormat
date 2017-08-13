@@ -160,6 +160,16 @@ public class CheckImgFormat {
     }
 
     /**
+     * 与目标格式进行匹配 {@link #get(File, boolean)}
+     *
+     * @param format 目标格式
+     * @param checkSuffix 检查文件名后缀
+     */
+    public static boolean is(@Format String format, @Nullable File imgFile, boolean checkSuffix) {
+        return format.equals(get(imgFile, checkSuffix));
+    }
+
+    /**
      * 与目标格式进行匹配 {@link #get(Context, Uri)}
      *
      * @param format 目标格式

@@ -8,8 +8,8 @@ android {
         applicationId "com.by_syk.checkimgformat.sample"
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 17081201
-        versionName "1.0.1"
+        versionCode 17081300
+        versionName "1.0.2"
     }
 
     buildTypes {

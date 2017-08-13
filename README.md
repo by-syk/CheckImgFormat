@@ -1,7 +1,7 @@
 # CheckImgFormat 检查图片格式
 
 [![](https://jitpack.io/v/by-syk/CheckImgFormat.svg)](https://jitpack.io/#by-syk/CheckImgFormat)
-[![](https://img.shields.io/badge/Download%20aar-1.0.1-brightgreen.svg)](out/checkimgformat-1.0.1.aar)
+[![](https://img.shields.io/badge/Download%20aar-1.0.2-brightgreen.svg)](out/checkimgformat-1.0.2.aar)
 
 
 对图片文件进行常见格式检查：「**.jpg**」、「**.png**」、「**.gif**」、「**.bmp**」
@@ -30,7 +30,7 @@ allprojects {
 
 ```
 dependencies {
-    compile 'com.github.by-syk:CheckImgFormat:1.0.1'
+    compile 'com.github.by-syk:CheckImgFormat:1.0.2'
 }
 ```
 
