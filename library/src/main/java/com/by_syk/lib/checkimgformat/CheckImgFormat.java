@@ -31,7 +31,9 @@ import java.io.InputStream;
 
 /**
  * <p>对图片文件进行常见格式检查：「.jpg」、「.png」、「.gif」、「.bmp」</p>
- * <p>首先会检查文件后缀；然后判断魔术数字，即检查文件数据流的前几个字节。参考冯立彬的博客：<a href="http://blog.csdn.net/fenglibing/article/details/7728275">使用JAVA如何对图片进行格式检查以及安全检查处理</a></p>
+ * <p>首先会检查文件后缀；然后判断魔术数字，即检查文件数据流的前几个字节。参考冯立彬的博客：
+ * <a href="http://blog.csdn.net/fenglibing/article/details/7728275">使用JAVA如何对图片进行格式检查以及安全检查处理</a>、
+ * <a href="http://blog.csdn.net/fenglibing/article/details/7733496">表示不同文件类型的魔术数字</a></p>
  * <p>注：这些检查手段非常基础，请勿用于安全要求场景，但可作为前期判断。</p>
  */
 
